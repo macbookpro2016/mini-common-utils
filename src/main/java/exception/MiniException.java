@@ -11,6 +11,21 @@ package exception;
  **/
 public class MiniException extends RuntimeException{
 
+    private int code;
+
+    private String message;
+
+    public MiniException(int code,String message){
+        super(message);
+        this.code = code;
+        this.message = message;
+    }
+
+    public MiniException(int code){
+        super();
+        this.code = code;
+    }
+
     public MiniException() {
         super();
     }
@@ -26,6 +41,10 @@ public class MiniException extends RuntimeException{
         super(cause);
     }
 
+    /**
+     * 重写该方法不复制堆栈信息
+     * @return
+     */
     @Override
     public synchronized Throwable fillInStackTrace() {
         return null;
