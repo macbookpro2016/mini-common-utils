@@ -60,4 +60,16 @@ public class ResultCodeConstant {
      * 错误信息-数据库读记录失败
      */
     public static final String ERROR_MYBATIS_READ_FAIL_MESSAGE = "数据库更新记录失败";
+
+    /**
+     * 错误码-未订阅修改
+     */
+    public static final int ERROR_MODBEFORESUB_CODE = 6;
+
+    /**
+     * 错误信息-未订阅修改
+     */
+    public static final String ERROR_MODBEFORESUB_MESSAGE = "请先订阅";
+
+
 }
